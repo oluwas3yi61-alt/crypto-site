@@ -1,92 +1,148 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CryptoInvest</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<nav>
-    <h2 style="color:#00eaff;">CRYPTOINVEST</h2>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="faq.html">FAQ</a>
-        <a href="signup.html">Sign Up</a>
-    </div>
-</nav>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family:'Inter',sans-serif;
-    background:#060606;
-    color:white;
 }
 
+body{
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Floating blobs background */
+body::before, body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+    animation:float 12s infinite alternate ease-in-out;
+}
+
+body::before{
+    background:#4facfe;
+    top:-100px;
+    left:-100px;
+}
+
+body::after{
+    background:#00f2fe;
+    bottom:-100px;
+    right:-100px;
+}
+
+@keyframes float{
+    from{transform:translateY(0px);}
+    to{transform:translateY(80px);}
+}
+
+/* Navbar */
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:20px 60px;
-    background:rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
     position:sticky;
     top:0;
+}
+
+nav h2{
+    background:linear-gradient(90deg,#4facfe,#00f2fe);
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
 nav a{
     color:white;
     text-decoration:none;
     margin-left:25px;
+    transition:0.3s;
 }
 
 nav a:hover{
-    color:#00eaff;
+    color:#00f2fe;
 }
 
+/* Hero */
+.hero{
+    text-align:center;
+    padding:140px 20px;
+}
+
+.hero h1{
+    font-size:64px;
+    background:linear-gradient(90deg,#4facfe,#00f2fe);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:#aaa;
+    margin-top:15px;
+    font-size:20px;
+}
+
+/* Glass cards */
 .glass{
     background:rgba(255,255,255,0.05);
-    backdrop-filter: blur(20px);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:15px;
-    padding:30px;
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:18px;
+    padding:35px;
+    transition:0.4s;
 }
 
+.glass:hover{
+    transform:translateY(-10px);
+    border-color:#00f2fe;
+}
+
+/* Buttons */
 .btn{
-    background:linear-gradient(90deg,#00eaff,#007bff);
-    padding:15px 30px;
+    background:linear-gradient(90deg,#4facfe,#00f2fe);
+    padding:15px 35px;
     border:none;
     border-radius:30px;
     color:white;
     font-weight:bold;
     cursor:pointer;
+    transition:0.3s;
 }
 
+.btn:hover{
+    transform:scale(1.08);
+}
+
+/* Layout */
 .container{
-    padding:80px 60px;
+    padding:100px 60px;
     max-width:1200px;
     margin:auto;
-}
-
-.hero{
-    text-align:center;
-    padding:120px 20px;
 }
 
 .cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:30px;
+    gap:35px;
 }
 
+/* Inputs */
 input{
     width:100%;
     padding:15px;
-    margin:10px 0;
+    margin:12px 0;
     border-radius:8px;
-    border:1px solid #333;
-    background:#111;
+    border:1px solid #222;
+    background:#0e0e0e;
     color:white;
 }
 
