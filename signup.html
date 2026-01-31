@@ -15,18 +15,25 @@
         <a href="signup.html">Sign Up</a>
     </div>
 </nav>
-<div class="container" style="display:flex;justify-content:center;align-items:center;height:80vh;">
-    <div class="glass" style="width:400px;">
-        <h2>Create Account</h2>
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Floating Blobs -->
+    <div class="blob absolute w-96 h-96 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-full filter blur-3xl opacity-30 animate-float1 -top-32 -left-32"></div>
+    <div class="blob absolute w-80 h-80 bg-gradient-to-tr from-purple-500 to-pink-400 rounded-full filter blur-2xl opacity-25 animate-float2 bottom-20 right-10"></div>
 
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="Email Address">
-        <input type="password" placeholder="Password">
+    <!-- Glass Signup Form -->
+    <div class="glass p-12 rounded-2xl w-full max-w-md relative z-10 animate-fadeIn">
+        <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+            Create Your Account
+        </h2>
 
-        <button class="btn" style="width:100%;">Sign Up</button>
+        <form class="space-y-4">
+            <input type="text" placeholder="Full Name" class="animate-fadeIn delay-200">
+            <input type="email" placeholder="Email Address" class="animate-fadeIn delay-400">
+            <input type="password" placeholder="Password" class="animate-fadeIn delay-600">
+            <button class="btn w-full animate-glow mt-4">Sign Up</button>
+        </form>
     </div>
-</div>
-
+</section>
 </body>
 </html>
 
