@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CryptoInvest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2 style="color:#00eaff;">CRYPTOINVEST</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+</nav>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 body{
