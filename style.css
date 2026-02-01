@@ -194,4 +194,19 @@ input{
 .animate-glow {
     animation: glow 2s ease-in-out infinite;
 }
+.btn-tab {
+    padding:10px 20px;
+    background:rgba(255,255,255,0.05);
+    border-radius:12px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.btn-tab:hover {
+    background:rgba(0,242,254,0.2);
+    border-color:#00f2fe;
+}
 
