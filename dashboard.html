@@ -1,150 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta charset="UTF-8">
     <title>Dashboard - CryptoInvest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="relative overflow-hidden">
+<body>
 
-    <!-- Floating background blobs -->
-    <div class="blob absolute w-96 h-96 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-full filter blur-3xl opacity-20 animate-float1 -top-32 -left-32"></div>
-    <div class="blob absolute w-80 h-80 bg-gradient-to-tr from-purple-500 to-pink-400 rounded-full filter blur-2xl opacity-15 animate-float2 bottom-20 right-10"></div>
+<nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="trade.html">Trade Crypto</a>
+    <a href="exchange.html">Exchange Rates</a>
+    <a href="addmoney.html">Add Money</a>
+    <a href="withdraw.html">Withdraw</a>
+</nav>
+
+<div class="container">
 
     <div class="card">
-                    <h2>Welcome to Your Crypto Dashboard</h2>
-                       <p>Select what you want to do.</p>
-        
-                     </div>
-    
-                    </div>
-
-        <!-- Tab Contents -->
-
-        <!-- Portfolio Tab -->
-        <div class="glass p-6 rounded-2xl mb-4">
-    <h2 class="text-2xl font-bold mb-4">Your Portfolio</h2>
-
-    <table style="width:100%; text-align:left;">
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
-            <th>Coin</th>
-            <th>Balance</th>
-            <th>Value (USD)</th>
-            <th>24h Change</th>
-        </tr>
-        <tr>
-            <td>BTC</td>
-            <td>0.52</td>
-            <td>$26,000</td>
-            <td style="color:lime;">+4.2%</td>
-        </tr>
-        <tr>
-            <td>ETH</td>
-            <td>3.1</td>
-            <td>$9,300</td>
-            <td style="color:red;">-1.1%</td>
-        </tr>
-        <tr>
-            <td>USDT</td>
-            <td>1500</td>
-            <td>$1,500</td>
-            <td style="color:lime;">0.0%</td>
-        </tr>
-    </table>
-</div>
-
-        <!-- Trade Tab -->
-        <div class="glass p-6 rounded-2xl mb-4">
-    <h2 class="text-2xl font-bold mb-4">Trade Crypto</h2>
-
-    <label>Select Coin</label>
-    <select style="width:100%; padding:10px; margin:10px 0;">
-        <option>Bitcoin (BTC)</option>
-        <option>Ethereum (ETH)</option>
-        <option>USDT</option>
-    </select>
-
-    <input type="number" placeholder="Amount" style="width:100%; padding:10px; margin-bottom:10px;">
-
-    <div style="display:flex; gap:10px;">
-        <button class="btn-tab" style="background:green;">Buy</button>
-        <button class="btn-tab" style="background:red;">Sell</button>
+        <h2>Welcome to Your Crypto Dashboard</h2>
+        <p>Select what you want to do below.</p>
     </div>
+
+    <div class="card-grid">
+
+        <a href="portfolio.html" class="nav-card">
+            📊 View Portfolio
+        </a>
+
+        <a href="trade.html" class="nav-card">
+            💱 Trade Cryptocurrency
+        </a>
+
+        <a href="exchange.html" class="nav-card">
+            📈 Check Exchange Rates
+        </a>
+
+        <a href="addmoney.html" class="nav-card">
+            💳 Add Money
+        </a>
+
+        <a href="withdraw.html" class="nav-card">
+            💸 Withdraw Funds
+        </a>
+
+    </div>
+
 </div>
-
-        <!-- Exchange Rates Tab -->
-        <div class="glass p-6 rounded-2xl mb-4">
-    <h2 class="text-2xl font-bold mb-4">Live Exchange Rates</h2>
-
-    <ul style="line-height:2;">
-        <li>BTC / USD — $50,245</li>
-        <li>ETH / USD — $3,480</li>
-        <li>BNB / USD — $410</li>
-        <li>SOL / USD — $102</li>
-        <li>XRP / USD — $0.62</li>
-    </ul>
-</div>
-
-        <!-- Charts Tab -->
-        <div class="glass p-6 rounded-2xl mb-4">
-    <h2 class="text-2xl font-bold mb-4">Market Chart</h2>
-    <canvas id="tradeChart"></canvas>
-</div>
-
-<script>
-const ctx = document.getElementById('tradeChart');
-new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
-        datasets: [{
-            label: 'BTC Price',
-            data: [48000,50000,49000,52000,51000,53000,50200],
-            borderWidth: 2
-        }]
-    }
-});
-</script>
-
-        <!-- Withdraw Tab -->
-        <div class="glass p-6 rounded-2xl mb-4">
-    <h2 class="text-2xl font-bold mb-4">Withdraw Funds</h2>
-
-    <input type="text" placeholder="Wallet Address" style="width:100%; padding:10px; margin-bottom:10px;">
-    <input type="number" placeholder="Amount" style="width:100%; padding:10px; margin-bottom:10px;">
-
-    <button class="btn-tab">Request Withdrawal</button>
-</div>
-        <!-- Add Money Tab -->
-        <div class="glass p-6 rounded-2xl mb-4">
-    <h2 class="text-2xl font-bold mb-4">Add Money</h2>
-
-    <select style="width:100%; padding:10px; margin-bottom:10px;">
-        <option>Bank Transfer</option>
-        <option>Crypto Deposit</option>
-        <option>Card Payment</option>
-    </select>
-
-    <input type="number" placeholder="Amount" style="width:100%; padding:10px; margin-bottom:10px;">
-
-    <button class="btn-tab">Deposit</button>
-</div>
-
-    </section>
-
-    <!-- Tabs JS -->
-    <script>
-    const tabs = document.querySelectorAll('.btn-tab');
-    const contents = document.querySelectorAll('.tab-content');
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            contents.forEach(c => c.classList.add('hidden')); // hide all
-            document.getElementById(tab.dataset.tab).classList.remove('hidden'); // show selected
-        });
-    });
-    </script>
 
 </body>
 </html>
