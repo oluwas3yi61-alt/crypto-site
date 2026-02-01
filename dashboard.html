@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta charset="UTF-8">
     <title>Dashboard - CryptoInvest</title>
     <link rel="stylesheet" href="style.css">
@@ -31,13 +32,36 @@
         <!-- Tab Contents -->
 
         <!-- Portfolio Tab -->
-        <div class="tab-content" id="portfolio">
-            <div class="glass p-6 rounded-2xl mb-4">
-                <h2 class="text-2xl font-bold mb-3">Your Portfolio</h2>
-                <p class="text-gray-300">BTC: 0.5 | ETH: 2.3 | USDT: 1500</p>
-                <p class="text-gray-300">Total Value: $25,400</p>
-            </div>
-        </div>
+        <div class="glass p-6 rounded-2xl mb-4">
+    <h2 class="text-2xl font-bold mb-4">Your Portfolio</h2>
+
+    <table style="width:100%; text-align:left;">
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <th>Coin</th>
+            <th>Balance</th>
+            <th>Value (USD)</th>
+            <th>24h Change</th>
+        </tr>
+        <tr>
+            <td>BTC</td>
+            <td>0.52</td>
+            <td>$26,000</td>
+            <td style="color:lime;">+4.2%</td>
+        </tr>
+        <tr>
+            <td>ETH</td>
+            <td>3.1</td>
+            <td>$9,300</td>
+            <td style="color:red;">-1.1%</td>
+        </tr>
+        <tr>
+            <td>USDT</td>
+            <td>1500</td>
+            <td>$1,500</td>
+            <td style="color:lime;">0.0%</td>
+        </tr>
+    </table>
+</div>
 
         <!-- Trade Tab -->
         <div class="tab-content hidden" id="trade">
