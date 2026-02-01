@@ -1,34 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-<title>Trade Crypto</title>
+<meta charset="UTF-8">
+<title>Trade Crypto - CryptoInvest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="trade.html">Trade Crypto</a>
+    <a href="exchange.html">Exchange Rates</a>
+    <a href="addmoney.html">Add Money</a>
+    <a href="withdraw.html">Withdraw</a>
+</nav>
+
 <div class="container">
+
     <h2>Trade Cryptocurrency</h2>
 
-<div class="card">
-    <label>Select Coin</label>
-    <select>
-        <option>Bitcoin (BTC)</option>
-        <option>Ethereum (ETH)</option>
-        <option>USDT</option>
-    </select>
+    <div class="card">
+        <label>Select Coin</label>
+        <select>
+            <option>Bitcoin (BTC)</option>
+            <option>Ethereum (ETH)</option>
+            <option>USDT</option>
+        </select>
 
-    <input type="number" placeholder="Enter Amount">
+        <input type="number" placeholder="Enter Amount">
 
-    <div style="margin-top:15px;">
-        <button class="btn">Buy</button>
-        <button class="btn">Sell</button>
+        <div style="margin-top:15px;">
+            <button class="btn">Buy</button>
+            <button class="btn">Sell</button>
+        </div>
     </div>
-</div>
 
-<div class="card">
-    <h3>Recent Trades</h3>
-    <p>Bought 0.02 BTC — $1,000</p>
-    <p>Sold 1 ETH — $3,400</p>
-</div>
+    <div class="card">
+        <h3>Recent Trades</h3>
+        <p>Bought 0.02 BTC — $1,000</p>
+        <p>Sold 1 ETH — $3,400</p>
+    </div>
 
-<a href="dashboard.html">← Back</a>
+    <a href="dashboard.html">← Back to Dashboard</a>
+
+</div>
+</body>
+</html>
