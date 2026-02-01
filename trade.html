@@ -8,12 +8,27 @@
 
 <div class="container">
     <h2>Trade Cryptocurrency</h2>
-    <p>Buy or sell crypto instantly.</p>
-    <button class="btn">Buy</button>
-    <button class="btn">Sell</button>
-    <br><br>
-    <a href="dashboard.html">← Back to Dashboard</a>
+
+<div class="card">
+    <label>Select Coin</label>
+    <select>
+        <option>Bitcoin (BTC)</option>
+        <option>Ethereum (ETH)</option>
+        <option>USDT</option>
+    </select>
+
+    <input type="number" placeholder="Enter Amount">
+
+    <div style="margin-top:15px;">
+        <button class="btn">Buy</button>
+        <button class="btn">Sell</button>
+    </div>
 </div>
 
-</body>
-</html>
+<div class="card">
+    <h3>Recent Trades</h3>
+    <p>Bought 0.02 BTC — $1,000</p>
+    <p>Sold 1 ETH — $3,400</p>
+</div>
+
+<a href="dashboard.html">← Back</a>
