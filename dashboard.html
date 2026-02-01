@@ -12,35 +12,26 @@
     <div class="blob absolute w-96 h-96 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-full filter blur-3xl opacity-20 animate-float1 -top-32 -left-32"></div>
     <div class="blob absolute w-80 h-80 bg-gradient-to-tr from-purple-500 to-pink-400 rounded-full filter blur-2xl opacity-15 animate-float2 bottom-20 right-10"></div>
 
-    <!-- Dashboard Container -->
-    <section class="container relative z-10 p-8">
-        <!-- Header -->
-        <h1 class="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-            Welcome to Your Crypto Dashboard
-            <div class="card">
+    <div class="container">
+    <div class="card">
+        <h2>Welcome to Your Crypto Dashboard</h2>
+        <p>Select what you want to do.</p>
+    </div>
+
+    <div class="card-grid">
+        <a href="portfolio.html" class="nav-card">Portfolio</a>
+        <a href="trade.html" class="nav-card">Trade Crypto</a>
+        <a href="exchange.html" class="nav-card">Exchange Rates</a>
+        <a href="addmoney.html" class="nav-card">Add Money</a>
+        <a href="withdraw.html" class="nav-card">Withdraw</a>
+    </div>
+
+</div>
+
     <h3>Your Portfolio</h3>
     <p>BTC: 0.542 | ETH: 1.20 | USDT: 1200</p>
     <button class="btn" onclick="location.href='portfolio.html'">View Portfolio</button>
 </div>
-
-<div class="card">
-    <h3>Trade Crypto</h3>
-    <p>Buy and sell cryptocurrencies easily.</p>
-    <button class="btn" onclick="location.href='trade.html'">Start Trading</button>
-</div>
-
-<div class="card">
-    <h3>Live Exchange Rates</h3>
-    <p>Check real-time crypto prices.</p>
-    <button class="btn" onclick="location.href='exchange.html'">View Rates</button>
-</div>
-
-<div class="card">
-    <h3>Add Money</h3>
-    <p>Fund your wallet securely.</p>
-    <button class="btn" onclick="location.href='addmoney.html'">Add Funds</button>
-</div>
-
 <div class="card">
     <h3>Withdraw Funds</h3>
     <p>Withdraw to your bank or wallet.</p>
