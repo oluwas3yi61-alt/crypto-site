@@ -5,48 +5,52 @@
     <title>FAQ - CryptoInvest</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="relative overflow-hidden">
 
-<section class="container">
-    <h1 style="text-align:center; font-size:48px; background:linear-gradient(90deg,#4facfe,#00f2fe); -webkit-background-clip:text; color:transparent; margin-bottom:60px;">
-        Frequently Asked Questions
-    </h1>
+    <!-- Floating blobs in the background -->
+    <div class="blob absolute w-96 h-96 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-full filter blur-3xl opacity-20 animate-float1 -top-32 -left-32"></div>
+    <div class="blob absolute w-80 h-80 bg-gradient-to-tr from-purple-500 to-pink-400 rounded-full filter blur-2xl opacity-15 animate-float2 bottom-20 right-10"></div>
 
-    <!-- FAQ Item 1 -->
-    <details class="glass p-6 rounded-xl cursor-pointer group">
-        <summary class="flex justify-between items-center font-bold text-lg list-none">
-            Is my investment secure?
-            <span class="transition-transform duration-300 group-open:rotate-45">+</span>
-        </summary>
-        <p class="mt-3 text-gray-300 opacity-0 group-open:opacity-100 transition-opacity duration-500">
-            We use encrypted protocols and AI monitoring to ensure your investments are fully protected.
-        </p>
-    </details>
-    <br>
+    <section class="container relative z-10">
+        <h1 style="text-align:center; font-size:48px; background:linear-gradient(90deg,#4facfe,#00f2fe); -webkit-background-clip:text; color:transparent; margin-bottom:60px;">
+            Frequently Asked Questions
+        </h1>
 
-    <!-- FAQ Item 2 -->
-    <details class="glass p-6 rounded-xl cursor-pointer group">
-        <summary class="flex justify-between items-center font-bold text-lg list-none">
-            How do I start?
-            <span class="transition-transform duration-300 group-open:rotate-45">+</span>
-        </summary>
-        <p class="mt-3 text-gray-300 opacity-0 group-open:opacity-100 transition-opacity duration-500">
-            Sign up, choose a plan, and start receiving AI-powered crypto signals instantly.
-        </p>
-    </details>
-    <br>
+        <!-- FAQ Item 1 -->
+        <details class="glass p-6 rounded-xl cursor-pointer group">
+            <summary class="flex justify-between items-center font-bold text-lg list-none">
+                Is my investment secure?
+                <span class="transition-transform duration-300 group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3 text-gray-300 opacity-0 group-open:opacity-100 transition-opacity duration-500">
+                We use encrypted protocols and AI monitoring to ensure your investments are fully protected.
+            </p>
+        </details>
+        <br>
 
-    <!-- FAQ Item 3 -->
-    <details class="glass p-6 rounded-xl cursor-pointer group">
-        <summary class="flex justify-between items-center font-bold text-lg list-none">
-            Can I cancel anytime?
-            <span class="transition-transform duration-300 group-open:rotate-45">+</span>
-        </summary>
-        <p class="mt-3 text-gray-300 opacity-0 group-open:opacity-100 transition-opacity duration-500">
-            Yes, subscriptions are flexible and can be canceled anytime without penalties.
-        </p>
-    </details>
-</section>
+        <!-- FAQ Item 2 -->
+        <details class="glass p-6 rounded-xl cursor-pointer group">
+            <summary class="flex justify-between items-center font-bold text-lg list-none">
+                How do I start?
+                <span class="transition-transform duration-300 group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3 text-gray-300 opacity-0 group-open:opacity-100 transition-opacity duration-500">
+                Sign up, choose a plan, and start receiving AI-powered crypto signals instantly.
+            </p>
+        </details>
+        <br>
+
+        <!-- FAQ Item 3 -->
+        <details class="glass p-6 rounded-xl cursor-pointer group">
+            <summary class="flex justify-between items-center font-bold text-lg list-none">
+                Can I cancel anytime?
+                <span class="transition-transform duration-300 group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3 text-gray-300 opacity-0 group-open:opacity-100 transition-opacity duration-500">
+                Yes, subscriptions are flexible and can be canceled anytime without penalties.
+            </p>
+        </details>
+    </section>
 
 </body>
 </html>
