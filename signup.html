@@ -21,22 +21,42 @@
     <div class="blob absolute w-80 h-80 bg-gradient-to-tr from-purple-500 to-pink-400 rounded-full filter blur-2xl opacity-25 animate-float2 bottom-20 right-10"></div>
 
     <!-- Glass Signup Form -->
-    <div class="glass p-12 rounded-2xl w-full max-w-md relative z-10 animate-fadeIn">
-        <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-            Create Your Account
-        </h2>
+    <!-- START OF SIGNUP FORM -->
+<div class="glass p-12 rounded-2xl w-full max-w-md relative z-10 animate-fadeIn">
+    <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+        Create Your Account
+    </h2>
 
-        <form class="space-y-4">
-            <input type="text" placeholder="Full Name" class="animate-fadeIn delay-200">
-            <input type="email" placeholder="Email Address" class="animate-fadeIn delay-400">
-            <input type="password" placeholder="Password" class="animate-fadeIn delay-600">
-            <button class="btn w-full animate-glow mt-4">Sign Up</button>
-        </form>
-    </div>
-</section>
-    <a href="dashboard.html">
-    <button class="btn animate-glow w-full mt-4">Sign Up</button>
-</a>
-</body>
-</html>
+    <form id="signupForm" class="space-y-4">
+        <input type="text" id="name" placeholder="Full Name" class="animate-fadeIn delay-200" required>
+        <input type="email" id="email" placeholder="Email Address" class="animate-fadeIn delay-400" required>
+        <input type="password" id="password" placeholder="Password" class="animate-fadeIn delay-600" required>
+        <button type="submit" class="btn animate-glow w-full mt-4">Sign Up</button>
+    </form>
+</div>
+<!-- END OF SIGNUP FORM -->
 
+<!-- START OF FORM SCRIPT -->
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(e){
+    e.preventDefault(); // prevent page refresh
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if(name && email && password){
+        // Optional: Save session data
+        sessionStorage.setItem('userName', name);
+        sessionStorage.setItem('userEmail', email);
+
+        alert('Account created successfully!');
+
+        // Redirect to dashboard
+        window.location.href = 'dashboard.html';
+    } else {
+        alert('Please fill in all fields.');
+    }
+});
+</script>
+<!-- END OF FORM SCRIPT -->
