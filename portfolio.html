@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-<title>Portfolio</title>
+<meta charset="UTF-8">
+<title>Portfolio - CryptoInvest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="trade.html">Trade Crypto</a>
+    <a href="exchange.html">Exchange Rates</a>
+    <a href="addmoney.html">Add Money</a>
+    <a href="withdraw.html">Withdraw</a>
+</nav>
+
 <div class="container">
-   <h2>Your Portfolio</h2>
 
-<div class="card">
-    <h3>Total Balance: $36,800</h3>
-    <p>Profit Today: <span style="color:lime;">+$420</span></p>
+    <h2>Your Portfolio</h2>
+
+    <div class="card">
+        <h3>Total Balance: $36,800</h3>
+        <p>Profit Today: <span style="color:lime;">+$420</span></p>
+    </div>
+
+    <div class="card">
+        <h3>Assets</h3>
+        <table style="width:100%; line-height:2;">
+            <tr><th>Coin</th><th>Amount</th><th>Value</th></tr>
+            <tr><td>BTC</td><td>0.52</td><td>$26,000</td></tr>
+            <tr><td>ETH</td><td>2.1</td><td>$7,350</td></tr>
+            <tr><td>USDT</td><td>3500</td><td>$3,500</td></tr>
+        </table>
+    </div>
+
+    <a href="dashboard.html">← Back to Dashboard</a>
+
 </div>
-
-<div class="card">
-    <h3>Assets</h3>
-    <table style="width:100%; line-height:2;">
-        <tr>
-            <th>Coin</th>
-            <th>Amount</th>
-            <th>Value</th>
-        </tr>
-        <tr>
-            <td>BTC</td>
-            <td>0.52</td>
-            <td>$26,000</td>
-        </tr>
-        <tr>
-            <td>ETH</td>
-            <td>2.1</td>
-            <td>$7,350</td>
-        </tr>
-        <tr>
-            <td>USDT</td>
-            <td>3500</td>
-            <td>$3,500</td>
-        </tr>
-    </table>
-</div>
-
-<a href="dashboard.html">← Back</a>
+</body>
+</html>
