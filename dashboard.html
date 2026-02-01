@@ -64,44 +64,81 @@
 </div>
 
         <!-- Trade Tab -->
-        <div class="tab-content hidden" id="trade">
-            <div class="glass p-6 rounded-2xl mb-4">
-                <h2 class="text-2xl font-bold mb-3">Trade Cryptocurrency</h2>
-                <p class="text-gray-300">Buy or sell crypto instantly.</p>
-            </div>
-        </div>
+        <div class="glass p-6 rounded-2xl mb-4">
+    <h2 class="text-2xl font-bold mb-4">Trade Crypto</h2>
+
+    <label>Select Coin</label>
+    <select style="width:100%; padding:10px; margin:10px 0;">
+        <option>Bitcoin (BTC)</option>
+        <option>Ethereum (ETH)</option>
+        <option>USDT</option>
+    </select>
+
+    <input type="number" placeholder="Amount" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <div style="display:flex; gap:10px;">
+        <button class="btn-tab" style="background:green;">Buy</button>
+        <button class="btn-tab" style="background:red;">Sell</button>
+    </div>
+</div>
 
         <!-- Exchange Rates Tab -->
-        <div class="tab-content hidden" id="exchange">
-            <div class="glass p-6 rounded-2xl mb-4">
-                <h2 class="text-2xl font-bold mb-3">Exchange Rates</h2>
-                <p class="text-gray-300">BTC: $50,000 | ETH: $3,500 | USDT: $1</p>
-            </div>
-        </div>
+        <div class="glass p-6 rounded-2xl mb-4">
+    <h2 class="text-2xl font-bold mb-4">Live Exchange Rates</h2>
+
+    <ul style="line-height:2;">
+        <li>BTC / USD — $50,245</li>
+        <li>ETH / USD — $3,480</li>
+        <li>BNB / USD — $410</li>
+        <li>SOL / USD — $102</li>
+        <li>XRP / USD — $0.62</li>
+    </ul>
+</div>
 
         <!-- Charts Tab -->
-        <div class="tab-content hidden" id="charts">
-            <div class="glass p-6 rounded-2xl mb-4">
-                <h2 class="text-2xl font-bold mb-3">Trade Charts</h2>
-                <p class="text-gray-300">Real-time price charts will appear here.</p>
-            </div>
-        </div>
+        <div class="glass p-6 rounded-2xl mb-4">
+    <h2 class="text-2xl font-bold mb-4">Market Chart</h2>
+    <canvas id="tradeChart"></canvas>
+</div>
+
+<script>
+const ctx = document.getElementById('tradeChart');
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+        datasets: [{
+            label: 'BTC Price',
+            data: [48000,50000,49000,52000,51000,53000,50200],
+            borderWidth: 2
+        }]
+    }
+});
+</script>
 
         <!-- Withdraw Tab -->
-        <div class="tab-content hidden" id="withdraw">
-            <div class="glass p-6 rounded-2xl mb-4">
-                <h2 class="text-2xl font-bold mb-3">Withdraw Funds</h2>
-                <p class="text-gray-300">Withdraw your earnings securely.</p>
-            </div>
-        </div>
+        <div class="glass p-6 rounded-2xl mb-4">
+    <h2 class="text-2xl font-bold mb-4">Withdraw Funds</h2>
 
+    <input type="text" placeholder="Wallet Address" style="width:100%; padding:10px; margin-bottom:10px;">
+    <input type="number" placeholder="Amount" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <button class="btn-tab">Request Withdrawal</button>
+</div>
         <!-- Add Money Tab -->
-        <div class="tab-content hidden" id="deposit">
-            <div class="glass p-6 rounded-2xl mb-4">
-                <h2 class="text-2xl font-bold mb-3">Add Money</h2>
-                <p class="text-gray-300">Deposit funds to start investing.</p>
-            </div>
-        </div>
+        <div class="glass p-6 rounded-2xl mb-4">
+    <h2 class="text-2xl font-bold mb-4">Add Money</h2>
+
+    <select style="width:100%; padding:10px; margin-bottom:10px;">
+        <option>Bank Transfer</option>
+        <option>Crypto Deposit</option>
+        <option>Card Payment</option>
+    </select>
+
+    <input type="number" placeholder="Amount" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <button class="btn-tab">Deposit</button>
+</div>
 
     </section>
 
