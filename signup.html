@@ -1,62 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CryptoInvest</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Sign Up | CryptoInvest</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* Centered glass signup card */
+.signup-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.signup-card{
+  width:400px;
+  padding:40px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(25px);
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.signup-card h2{
+  text-align:center;
+  margin-bottom:20px;
+  color:#00f2fe;
+}
+
+.signup-card button{
+  width:100%;
+}
+</style>
 </head>
+
 <body>
 
-<nav>
-    <h2 style="color:#00eaff;">CRYPTOINVEST</h2>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="faq.html">FAQ</a>
-        <a href="signup.html">Sign Up</a>
-    </div>
-</nav>
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <!-- Floating Blobs -->
-    <div class="blob absolute w-96 h-96 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-full filter blur-3xl opacity-30 animate-float1 -top-32 -left-32"></div>
-    <div class="blob absolute w-80 h-80 bg-gradient-to-tr from-purple-500 to-pink-400 rounded-full filter blur-2xl opacity-25 animate-float2 bottom-20 right-10"></div>
+<div class="signup-wrapper">
+  <div class="signup-card">
+    <h2>Create Account</h2>
 
-    <!-- Glass Signup Form -->
-    <!-- START OF SIGNUP FORM -->
-<div class="glass p-12 rounded-2xl w-full max-w-md relative z-10 animate-fadeIn">
-    <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-        Create Your Account
-    </h2>
-
-    <form id="signupForm" class="space-y-4">
-        <input type="text" id="name" placeholder="Full Name" class="animate-fadeIn delay-200" required>
-        <input type="email" id="email" placeholder="Email Address" class="animate-fadeIn delay-400" required>
-        <input type="password" id="password" placeholder="Password" class="animate-fadeIn delay-600" required>
-        <button type="submit" class="btn animate-glow w-full mt-4">Sign Up</button>
+    <form id="signupForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Confirm Password" required>
+      <button class="btn" type="submit">Sign Up</button>
     </form>
+
+    <p style="text-align:center;margin-top:15px;">
+      Already have account?
+      <a href="dashboard.html">Login</a>
+    </p>
+  </div>
 </div>
-<!-- END OF SIGNUP FORM -->
 
-<!-- START OF FORM SCRIPT -->
 <script>
-document.getElementById('signupForm').addEventListener('submit', function(e){
-    e.preventDefault(); // prevent page refresh
+document.getElementById("signupForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
+  // simple fake registration
+  alert("Account created successfully!");
 
-    if(name && email && password){
-        // Optional: Save session data
-        sessionStorage.setItem('userName', name);
-        sessionStorage.setItem('userEmail', email);
-
-        alert('Account created successfully!');
-
-        // Redirect to dashboard
-        window.location.href = 'dashboard.html';
-    } else {
-        alert('Please fill in all fields.');
-    }
+  // redirect to dashboard
+  window.location.href = "dashboard.html";
 });
 </script>
-<!-- END OF FORM SCRIPT -->
+
+</body>
+</html>
