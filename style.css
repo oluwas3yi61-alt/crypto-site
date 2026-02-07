@@ -9,7 +9,7 @@
 
 body{
     background: linear-gradient(135deg,#0b0f1a,#05070d);
-    color:white;
+    color:blue;
     min-height:100vh;
 }
 
@@ -57,7 +57,7 @@ nav a{
     border-radius:12px;
     text-align:center;
     text-decoration:none;
-    color:white;
+    color:dark blue;
     transition:0.3s;
     border:1px solid rgba(255,255,255,0.1);
 }
@@ -83,6 +83,6 @@ input, select{
     padding:12px 20px;
     border-radius:6px;
     cursor:pointer;
-    color:white;
+    color:darkblu;
     font-weight:600;
 }
