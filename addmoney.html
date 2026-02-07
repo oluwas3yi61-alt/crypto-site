@@ -1,46 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CryptoInvest</title>
-<link rel="stylesheet" href="./css/style.css">
+<title>Add Money</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="trade.html">Trade Crypto</a>
-    <a href="exchange.html">Exchange Rates</a>
-    <a href="addmoney.html">Add Money</a>
-    <a href="withdraw.html">Withdraw</a>
-</nav>
-
-<div class="container">
-
-    <h2>Add Money to Wallet</h2>
-
-    <div class="card">
-        <label>Select Payment Method</label>
-        <select>
-            <option>Bank Transfer</option>
-            <option>Credit Card</option>
-            <option>Crypto Deposit</option>
-        </select>
-
-        <input type="number" placeholder="Enter Amount">
-        <button class="btn">Deposit</button>
-    </div>
-
-    <div class="card">
-        <h3>Recent Deposits</h3>
-        <p>$2,000 via Bank Transfer</p>
-        <p>$500 via Card</p>
-    </div>
-
-    <a href="dashboard.html">← Back to Dashboard</a>
-
+<div class="sidebar">
+  <h2>CryptoInvest</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="trade.html">Trade</a>
+  <a href="market.html">Market</a>
+  <a href="addmoney.html">Add Money</a>
+  <a href="withdraw.html">Withdraw</a>
 </div>
+
+<div class="main">
+<div class="card">
+<h2>Deposit Funds</h2>
+<input placeholder="Amount">
+<select>
+<option>Bank Transfer</option>
+<option>Crypto Deposit</option>
+</select>
+<button class="btn">Deposit</button>
+</div>
+</div>
+
 </body>
 </html>
