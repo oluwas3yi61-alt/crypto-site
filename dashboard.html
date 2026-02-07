@@ -1,53 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CryptoInvest</title>
-<link rel="stylesheet" href="./css/style.css">
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="trade.html">Trade Crypto</a>
-    <a href="exchange.html">Exchange Rates</a>
-    <a href="addmoney.html">Add Money</a>
-    <a href="withdraw.html">Withdraw</a>
-</nav>
+<div class="sidebar">
+  <h2>CryptoInvest</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="trade.html">Trade</a>
+  <a href="market.html">Market</a>
+  <a href="addmoney.html">Add Money</a>
+  <a href="withdraw.html">Withdraw</a>
+</div>
 
-<div class="container">
+<div class="main">
+  <div class="topbar">
+    <div class="ticker">BTC: $50,245 | ETH: $3,480 | SOL: $102</div>
+    <div>User: Demo Account</div>
+  </div>
+
+  <div class="content">
+
+    <div class="grid">
+      <div class="card">Total Balance: $24,500</div>
+      <div class="card">Today Profit: +$620</div>
+      <div class="card">Open Trades: 3</div>
+    </div>
 
     <div class="card">
-        <h2>Welcome to Your Crypto Dashboard</h2>
-        <p>Select what you want to do below.</p>
+      <h3>Recent Activities</h3>
+      <p>Bought BTC — $2,000</p>
+      <p>Sold ETH — $1,200</p>
     </div>
 
-    <div class="card-grid">
-
-        <a href="portfolio.html" class="nav-card">
-            📊 View Portfolio
-        </a>
-
-        <a href="trade.html" class="nav-card">
-            💱 Trade Cryptocurrency
-        </a>
-
-        <a href="exchange.html" class="nav-card">
-            📈 Check Exchange Rates
-        </a>
-
-        <a href="addmoney.html" class="nav-card">
-            💳 Add Money
-        </a>
-
-        <a href="withdraw.html" class="nav-card">
-            💸 Withdraw Funds
-        </a>
-
-    </div>
-
+  </div>
 </div>
 
 </body>
