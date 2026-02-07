@@ -1,10 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sign Up | CryptoInvest</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* Centered glass signup card */
+.signup-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.signup-card{
+  width:400px;
+  padding:40px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(25px);
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.signup-card h2{
+  text-align:center;
+  margin-bottom:20px;
+  color:#00f2fe;
+}
+
+.signup-card button{
+  width:100%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="signup-wrapper">
+  <div class="signup-card">
+    <h2>Create Account</h2>
+
+    <form id="signupForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Confirm Password" required>
+      <button class="btn" type="submit">Sign Up</button>
+    </form>
+
+    <p style="text-align:center;margin-top:15px;">
+      Already have account?
+      <a href="dashboard.html">Login</a>
+    </p>
+  </div>
+</div>
+
+<script>
+document.getElementById("signupForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  // simple fake registration
+  alert("Account created successfully!");
+
+  // redirect to dashboard
+  window.location.href = "dashboard.html";
+});
+</script>
+
+</body>
+</html>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
   background:#060b1f;
-  color:white;
+  color:neon blue;
   display:flex;
 }
 
